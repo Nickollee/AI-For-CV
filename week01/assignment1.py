@@ -1,9 +1,4 @@
-'''Assignments:
-1.Recode all the examples.
-2.Change image through YUV space.
-3.Combine image crop,colour shift,rotation and perspective transform together to complete a data augmentation script.
-# author:Niki
-'''
+'''Assignments:1.Recode all the examples.'''
 
 import cv2
 import random
