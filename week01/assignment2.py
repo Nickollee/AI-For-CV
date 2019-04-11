@@ -6,7 +6,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # 读入显示
-img = cv2.imread('D:\learning_materials\Second_grade\AI_for_NLP&CV_Train\courseware\CV\week2\\flower.png')
+img = cv2.imread('./week01/flower.png')
 
 def random_yuv_color(img):
     img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
