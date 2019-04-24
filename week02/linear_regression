@@ -40,7 +40,7 @@ def optimizer(data,starting_b,starting_m,learning_rate,num_iter):
     return [b, m]
 
 def Linear_regression():
-    data = np.loadtxt('D:\learning_materials\Second_grade\AI_for_NLP&CV_Train\\assinment\opcv_test\data.csv',delimiter=',')
+    data = np.loadtxt('.\data.csv',delimiter=',')
     learning_rate = 0.001
     initial_b = 0.0
     initial_m = 0.0
