@@ -38,7 +38,13 @@ def optimizer(data,starting_b,starting_m,learning_rate,num_iter):
         if i%100 == 0:
             print('iter {0}:error={1}'.format(i,compute_error(b,m,data)))
     return [b, m]
-
+def plot_data(data,b,m):
+    x = data[:, 0]
+    y = data[:, 1]
+    y_predict = m*x+b
+    plt.plot(x, y, 'o')
+    plt.plot(x, y_predict, 'k-')
+    plt.show()
 def Linear_regression():
     data = np.loadtxt('.\data.csv',delimiter=',')
     learning_rate = 0.001
@@ -50,5 +56,6 @@ def Linear_regression():
     [b, m] = optimizer(data,initial_b, initial_m, learning_rate, num_iter)
     print('final formula parmaters:\n b = {1}\n m={2}\n error of end = {3} \n'.format(num_iter, b, m,
                                                                                 compute_error(b, m, data)))
+    plot_data(data,b,m)
 if __name__ =='__main__':
     Linear_regression()
